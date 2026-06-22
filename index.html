@@ -1,348 +1,117 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Said G. - Director of Technology & Staff Engineer</title>
+    <title>Said González Conde | Director of Technology</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['"Source Sans 3"', 'system-ui', '-apple-system', 'sans-serif'],
-                        mono: ['"Source Code Pro"', 'monospace'],
-                    },
                     colors: {
-                        stripe: {
-                            purple: '#533afd',
-                            purpleHover: '#4434d4',
-                            navy: '#061b31',
-                            dark: '#1c1e54',
-                            slate: '#64748d',
-                            label: '#273951',
-                            border: '#e5edf5',
-                            bg: '#f6f9fc',
-                            successText: '#108c3d',
-                            successBg: 'rgba(21,190,83,0.15)',
-                            successBorder: 'rgba(21,190,83,0.3)',
-                        }
-                    },
-                    boxShadow: {
-                        'stripe': 'rgba(50,50,93,0.25) 0px 30px 45px -30px, rgba(0,0,0,0.1) 0px 18px 36px -18px',
-                        'stripe-hover': 'rgba(50,50,93,0.35) 0px 40px 60px -30px, rgba(0,0,0,0.12) 0px 24px 48px -18px',
-                        'stripe-sm': 'rgba(23,23,23,0.08) 0px 15px 35px 0px',
+                        dark: '#0f172a',
+                        primary: '#3b82f6',
+                        accent: '#10b981'
                     }
                 }
             }
         }
     </script>
-    <style>
-        body { 
-            background-color: #ffffff; 
-            color: #64748d;
-        }
-        h1, h2, h3, h4, h5, h6, .brand-text {
-            color: #061b31;
-            font-weight: 300;
-            font-feature-settings: "ss01" on;
-        }
-        p {
-            font-weight: 300;
-            font-feature-settings: "ss01" on;
-        }
-        .text-tnum { font-feature-settings: "tnum" on; }
-        .hero-gradient {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100vw;
-            height: 90vh;
-            background: linear-gradient(145deg, rgba(246,249,252,1) 0%, rgba(246,249,252,0) 100%),
-                        radial-gradient(circle at 80% -20%, rgba(249,107,238,0.08) 0%, transparent 40%),
-                        radial-gradient(circle at 100% 20%, rgba(83,58,253,0.05) 0%, transparent 50%);
-            z-index: -1;
-            transform: skewY(-8deg);
-            transform-origin: top right;
-        }
-    </style>
 </head>
-<body class="antialiased selection:bg-stripe-purple selection:text-white relative overflow-x-hidden">
+<body class="bg-dark text-slate-300 font-sans antialiased selection:bg-primary selection:text-white">
 
-    <div class="hero-gradient"></div>
-
-    <!-- Nav -->
-    <nav class="w-full bg-white/80 backdrop-blur-md border-b border-stripe-border sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="brand-text font-bold text-xl tracking-tight">Said G.</span>
-            <div class="hidden md:flex space-x-8 text-sm font-normal text-stripe-label">
-                <a href="#philosophy" class="hover:text-stripe-purple transition-colors">Filosofía</a>
-                <a href="#impact" class="hover:text-stripe-purple transition-colors">Impacto</a>
-                <a href="#experience" class="hover:text-stripe-purple transition-colors">Experiencia</a>
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-dark/90 backdrop-blur-sm border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <span class="text-white font-bold tracking-wider text-xl">SGC<span class="text-primary">.</span></span>
+                <div class="flex space-x-6 text-sm font-medium">
+                    <a href="#experience" class="hover:text-white transition">Experience</a>
+                    <a href="#contact" class="hover:text-white transition">Contact</a>
+                </div>
             </div>
-            <a href="mailto:hola@saidgc.com" class="px-4 py-2 bg-stripe-purple hover:bg-stripe-purpleHover text-white rounded font-normal text-sm transition-colors shadow-stripe-sm">
-                Contactar
-            </a>
         </div>
     </nav>
 
-    <div class="max-w-6xl mx-auto px-6 pt-24 pb-20">
-        
-        <!-- Hero -->
-        <header class="mb-32 mt-10 max-w-4xl relative">
-            <div class="inline-flex items-center gap-2 px-3 py-1 mb-8 rounded bg-stripe-bg border border-stripe-border text-stripe-label text-xs font-normal shadow-sm">
-                <span class="w-2 h-2 rounded-full bg-stripe-purple animate-pulse"></span>
-                STATUS: EXPLORING NEW OPPORTUNITIES (US/LATAM)
-            </div>
-            <h1 class="text-6xl md:text-[5.5rem] leading-[1.03] tracking-[-1.4px] mb-6">
-                Directing technology <br /> for scalable impact.
-            </h1>
-            <p class="text-xl md:text-2xl text-stripe-slate leading-[1.4] max-w-3xl mb-10 font-light">
-                Director of Technology & Staff Engineer. Más de media década orquestando transformaciones técnicas profundas: desde arquitecturas de alta concurrencia en Fintech, hasta automatización autónoma con IA y la reducción drástica de OPEX operativo.
-            </p>
-            <div class="flex flex-wrap gap-4 items-center">
-                <a href="#experience" class="px-5 py-2.5 bg-stripe-purple hover:bg-stripe-purpleHover text-white rounded font-normal text-[16px] transition-colors shadow-stripe-sm">
-                    Ver trayectoria
-                </a>
-                <a href="https://github.com/saidgc" target="_blank" class="px-5 py-2.5 bg-transparent border border-[#b9b9f9] text-stripe-purple hover:bg-[#533afd0d] rounded font-normal text-[16px] transition-colors flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                    GitHub
-                </a>
-            </div>
-        </header>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto flex flex-col justify-center min-h-[80vh]">
+        <h2 class="text-primary font-semibold tracking-wide uppercase text-sm mb-4">Director of Technology & Staff Engineer</h2>
+        <h1 class="text-5xl sm:text-7xl font-extrabold text-white mb-6 leading-tight">
+            I build scalable <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">infrastructure & teams.</span>
+        </h1>
+        <p class="text-lg text-slate-400 max-w-2xl mb-10 leading-relaxed">
+            Over 5 years of experience decoupling legacy systems, driving digital transformations, and leading high-performance engineering teams. Expert in Python, Cloud Architecture (AWS/GCP), and Autonomous AI Agents.
+        </p>
+        <div class="flex space-x-4">
+            <a href="#experience" class="bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-md font-medium transition shadow-lg shadow-blue-500/30">View Impact</a>
+            <a href="mailto:said@saidgc.com" class="border border-slate-600 hover:border-slate-400 text-white px-6 py-3 rounded-md font-medium transition">Get in Touch</a>
+        </div>
+    </section>
 
-        <!-- Engineering Philosophy -->
-        <section id="philosophy" class="mb-32">
-            <h3 class="text-[26px] leading-[1.12] tracking-[-0.26px] mb-10 brand-text border-b border-stripe-border pb-4">Filosofía de Ingeniería</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div>
-                    <h4 class="text-[18px] text-stripe-navy font-medium mb-3">Pragmatismo Técnico</h4>
-                    <p class="text-[15px] text-stripe-slate leading-[1.5]">
-                        La tecnología debe estar al servicio de las métricas del negocio. No adopto la última herramienta por moda, sino arquitecturas que aseguren <em>time-to-market</em>, mantenibilidad a largo plazo y que resuelvan cuellos de botella reales en las operaciones.
+    <!-- Experience/Impact Section -->
+    <section id="experience" class="py-20 bg-slate-900/50 border-y border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
+                <span class="bg-primary w-8 h-1 mr-4 rounded"></span> Featured Impact
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Impact 1 -->
+                <div class="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-primary/50 transition">
+                    <div class="text-accent text-3xl mb-4"><i class="fa-solid fa-code-branch"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-3">Digital Transformation & Legacy Decoupling</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Spearheaded the strategic migration from an obsolete, monolithic ERP (Odoo 13) to a modern, custom-built decoupled architecture (POSX in Flutter/Cloud). Eliminated massive technical debt and future-proofed nationwide retail operations.
                     </p>
+                    <span class="text-xs font-semibold px-2 py-1 bg-slate-700 text-slate-300 rounded">Odoo / Flutter / Cloud</span>
                 </div>
-                <div>
-                    <h4 class="text-[18px] text-stripe-navy font-medium mb-3">Cultura FinOps & Cloud</h4>
-                    <p class="text-[15px] text-stripe-slate leading-[1.5]">
-                        El costo de infraestructura es una métrica de ingeniería, no solo de finanzas. Diseño sistemas resilientes optimizando el OPEX desde la fase de arquitectura, promoviendo infraestructuras serverless y el uso elástico de recursos.
+
+                <!-- Impact 2 -->
+                <div class="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-primary/50 transition">
+                    <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-server"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-3">FinOps & Cloud Strategy (-70% OPEX)</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Architected the end-to-end database and infrastructure migration from AWS to GCP. Orchestrated massive data transfers with under 30 minutes of downtime, slashing operational cloud costs by 70%.
                     </p>
+                    <span class="text-xs font-semibold px-2 py-1 bg-slate-700 text-slate-300 rounded">AWS / GCP / FinOps</span>
                 </div>
-                <div>
-                    <h4 class="text-[18px] text-stripe-navy font-medium mb-3">Autonomía y Resiliencia</h4>
-                    <p class="text-[15px] text-stripe-slate leading-[1.5]">
-                        Construyo equipos de alto rendimiento fomentando la propiedad extrema (ownership). A nivel sistema, enfoco mis esfuerzos en arquitecturas orientadas a eventos y alta concurrencia que toleren fallos sin degradar la experiencia del usuario.
+
+                <!-- Impact 3 -->
+                <div class="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-primary/50 transition">
+                    <div class="text-purple-500 text-3xl mb-4"><i class="fa-solid fa-robot"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-3">AI & Automation (Autonomous Agents)</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Designed and deployed autonomous AI support and executive agents using LangGraph, Gemini, and Cloud Run, establishing cross-context routing and predictive ML models for demand planning.
                     </p>
+                    <span class="text-xs font-semibold px-2 py-1 bg-slate-700 text-slate-300 rounded">LangGraph / Gemini / Python</span>
                 </div>
-            </div>
-        </section>
 
-        <!-- Key Strategic Impact -->
-        <section id="impact" class="mb-32">
-            <h3 class="text-[26px] leading-[1.12] tracking-[-0.26px] mb-10 brand-text border-b border-stripe-border pb-4">Casos de Estudio Estratégicos</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <div class="bg-white p-6 rounded-[8px] border border-stripe-border shadow-stripe hover:shadow-stripe-hover transition-all duration-300 flex flex-col">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="text-[42px] leading-[1.15] tracking-[-0.96px] brand-text text-tnum">70%</div>
-                    </div>
-                    <h4 class="text-[20px] leading-[1.1] tracking-[-0.22px] mb-3 brand-text">Migración Cloud & FinOps</h4>
-                    <p class="text-[15px] text-stripe-slate leading-[1.4] mb-6">
-                        Auditoría y migración estratégica de arquitectura de AWS a GCP. Al refactorizar la infraestructura, se redujo el OPEX operativo de $3k a $800 USD mensuales sin impactar los SLAs de disponibilidad.
+                <!-- Impact 4 -->
+                <div class="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-primary/50 transition">
+                    <div class="text-yellow-500 text-3xl mb-4"><i class="fa-solid fa-building-columns"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-3">Fintech & High-Scale Infrastructure</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        At Fondeadora, executed time-sensitive core banking database migrations to comply with strict CNBV regulatory ultimatums. Managed $20k+ USD/month cloud environments for high-traffic financial applications.
                     </p>
-                    <div class="mt-auto pt-4 border-t border-stripe-border">
-                        <span class="text-[12px] font-mono text-stripe-label uppercase">AWS • GCP • Docker</span>
-                    </div>
+                    <span class="text-xs font-semibold px-2 py-1 bg-slate-700 text-slate-300 rounded">CNBV / Fintech / High-Availability</span>
                 </div>
-
-                <!-- Card 2 -->
-                <div class="bg-white p-6 rounded-[8px] border border-stripe-border shadow-stripe hover:shadow-stripe-hover transition-all duration-300 flex flex-col">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="text-[42px] leading-[1.15] tracking-[-0.96px] brand-text">AI</div>
-                    </div>
-                    <h4 class="text-[20px] leading-[1.1] tracking-[-0.22px] mb-3 brand-text">Ecosistema de Agentes IA</h4>
-                    <p class="text-[15px] text-stripe-slate leading-[1.4] mb-6">
-                        Desarrollo de múltiples agentes con LangGraph y una arquitectura LLM agnóstica (modelos mainstream comerciales y Open Source). Incluye un agente de soporte de Nivel 1 (Postgres isolation, "Shadow Mode") y un Data Agent C-Level que permite al CEO analizar KPIs operativos en tiempo real.
-                    </p>
-                    <div class="mt-auto pt-4 border-t border-stripe-border">
-                        <span class="text-[12px] font-mono text-stripe-label uppercase">LangGraph • Model-Agnostic LLMs • Odoo</span>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="bg-white p-6 rounded-[8px] border border-stripe-border shadow-stripe hover:shadow-stripe-hover transition-all duration-300 flex flex-col">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="text-[42px] leading-[1.15] tracking-[-0.96px] brand-text text-tnum">NLP</div>
-                        <span class="px-2 py-1 bg-stripe-successBg text-stripe-successText border border-stripe-successBorder rounded text-[11px] uppercase tracking-wider font-semibold">Paper</span>
-                    </div>
-                    <h4 class="text-[20px] leading-[1.1] tracking-[-0.22px] mb-3 brand-text">Investigación: NLP & Transformers</h4>
-                    <p class="text-[15px] text-stripe-slate leading-[1.4] mb-6">
-                        Coautor del paper académico <em>"A study on the Detection of Fake news in Spanish"</em> (Indexado por <strong>CONACYT</strong> / IJCOPI, 2024). Investigación aplicada entrenando modelos Deep Learning y Transformers (BETO, mBERT, LSTM) sobre 40k+ registros para clasificación de lenguaje natural con un 98% de accuracy.
-                    </p>
-                    <div class="mt-auto pt-4 border-t border-stripe-border flex justify-between items-center">
-                        <span class="text-[12px] font-mono text-stripe-label uppercase">Deep Learning • BETO</span>
-                        <a href="https://ijcopi.org/ojs/article/download/467/261/1482" target="_blank" class="text-stripe-purple hover:text-stripe-purpleHover text-[14px] font-normal transition-colors">Leer Paper -></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </div> <!-- End Main Container -->
-
-    <!-- Full-width Dark Brand Section -->
-    <section id="experience" class="bg-stripe-dark w-full py-24 px-6 mb-20 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-[0.03]" style="background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 1px, transparent 1px, transparent 20px);"></div>
-        
-        <div class="max-w-6xl mx-auto relative z-10">
-            <h3 class="text-[32px] leading-[1.1] tracking-[-0.64px] text-white mb-16">Trayectoria Ejecutiva & Técnica</h3>
-            
-            <div class="space-y-16">
-                <!-- SmartBamboo -->
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                    <div class="md:col-span-1">
-                        <h4 class="text-[22px] text-white tracking-[-0.22px] mb-1">SmartBamboo</h4>
-                        <span class="text-[#b9b9f9] text-[14px] font-mono">2023 — Presente</span>
-                    </div>
-                    <div class="md:col-span-3">
-                        <span class="text-white font-normal text-[18px] block mb-3">Director of Technology</span>
-                        <p class="text-[16px] text-white/70 leading-[1.5] mb-4">
-                            Liderazgo integral de la división tecnológica. Responsable de escalar la infraestructura, definir la arquitectura de sistemas internos (Odoo ERP) y dirigir iniciativas clave de innovación, combinando hardware y software.
-                        </p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3">
-                                <span class="text-stripe-purple mt-1">✓</span> 
-                                <span class="text-[15px] text-white/80">Diseño de un ecosistema de IA Autónoma con arquitectura LLM agnóstica (LangGraph). Incluye soporte (Postgres isolation, "Shadow Mode") y un Executive Data Agent conversacional para toma de decisiones C-Level.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-stripe-purple mt-1">✓</span> 
-                                <span class="text-[15px] text-white/80">Gestión FinOps que consolidó la migración AWS-GCP, generando ahorros del 70% en facturación cloud.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-stripe-purple mt-1">✓</span> 
-                                <span class="text-[15px] text-white/80">Supervisión de despliegues IoT: sincronización de sensores RFID con ERPs transaccionales (Odoo).</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="w-full h-px bg-white/10"></div>
-
-                <!-- Fondeadora -->
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                    <div class="md:col-span-1">
-                        <h4 class="text-[22px] text-white tracking-[-0.22px] mb-1">Fondeadora</h4>
-                        <span class="text-white/50 text-[14px] font-mono text-tnum">2022 — 2023</span>
-                    </div>
-                    <div class="md:col-span-3">
-                        <span class="text-white font-normal text-[18px] block mb-3">Backend Software Engineer</span>
-                        <p class="text-[16px] text-white/70 leading-[1.5] mb-4">
-                            Ingeniería core dentro de uno de los Neobancos de mayor crecimiento en México. Enfoque total en transaccionalidad, resiliencia y el ecosistema Fintech.
-                        </p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3">
-                                <span class="text-stripe-purple mt-1">✓</span> 
-                                <span class="text-[15px] text-white/80">Desarrollo y optimización de microservicios backend preparados para manejar altos picos de concurrencia de miles de usuarios.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-stripe-purple mt-1">✓</span> 
-                                <span class="text-[15px] text-white/80">Implementación de reglas de negocio y arquitecturas seguras para garantizar el cumplimiento normativo estricto auditado por la CNBV.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="w-full h-px bg-white/10"></div>
-
-                <!-- Previous Experience (Aggregated) -->
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                    <div class="md:col-span-1">
-                        <h4 class="text-[22px] text-white tracking-[-0.22px] mb-1">Proyectos Pre-2022</h4>
-                        <span class="text-white/50 text-[14px] font-mono text-tnum">2018 — 2022</span>
-                    </div>
-                    <div class="md:col-span-3">
-                        <span class="text-white font-normal text-[18px] block mb-3">Tech Lead & Full-Stack Developer</span>
-                        <p class="text-[16px] text-white/70 leading-[1.5] mb-4">
-                            Periodo de inmersión profunda en diversos ecosistemas tecnológicos, liderando implementaciones de pasarelas de pago, ecosistemas cripto y automatización de hardware.
-                        </p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3">
-                                <span class="text-stripe-purple mt-1">✓</span> 
-                                <span class="text-[15px] text-white/80"><strong>Pionero en NLP (Text-to-Code) pre-COVID:</strong> Investigación temprana en modelos de procesamiento de lenguaje natural para generar código Python funcional a partir de instrucciones en texto, años antes del boom de los LLMs comerciales.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-stripe-purple mt-1">✓</span> 
-                                <span class="text-[15px] text-white/80">Desarrollo de bots transaccionales y trackers de mercado cripto utilizando la API de Bitso.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-stripe-purple mt-1">✓</span> 
-                                <span class="text-[15px] text-white/80">Investigación aplicada en Deep Learning e integraciones IoT/domóticas con microcontroladores ESP32.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Tech Stack / Skills -->
-    <div class="max-w-6xl mx-auto px-6 mb-24" id="stack">
-        <h3 class="text-[26px] leading-[1.12] tracking-[-0.26px] mb-10 brand-text border-b border-stripe-border pb-4">Core Competencies & Stack</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <!-- Infra -->
-            <div class="bg-stripe-bg p-5 rounded border border-stripe-border">
-                <h5 class="text-[14px] font-semibold text-stripe-navy mb-4">Cloud & DevOps</h5>
-                <ul class="space-y-2 text-[14px] text-stripe-slate">
-                    <li>GCP (Cloud Run, Compute)</li>
-                    <li>AWS Architecture</li>
-                    <li>Docker / Contenedores</li>
-                    <li>FinOps & Cost Mgmt</li>
-                </ul>
-            </div>
-            <!-- Backend -->
-            <div class="bg-stripe-bg p-5 rounded border border-stripe-border">
-                <h5 class="text-[14px] font-semibold text-stripe-navy mb-4">Ingeniería Core</h5>
-                <ul class="space-y-2 text-[14px] text-stripe-slate">
-                    <li>Python (Avanzado)</li>
-                    <li>Node.js</li>
-                    <li>Arquitecturas de Alta Concurrencia</li>
-                    <li>Integraciones JSON-RPC/REST</li>
-                </ul>
-            </div>
-            <!-- AI & Data -->
-            <div class="bg-stripe-bg p-5 rounded border border-stripe-border">
-                <h5 class="text-[14px] font-semibold text-stripe-navy mb-4">AI & Data</h5>
-                <ul class="space-y-2 text-[14px] text-stripe-slate">
-                    <li>LangGraph & Agentic AI</li>
-                    <li>Agnostic LLM Routing (Proprietary & OS)</li>
-                    <li>Machine Learning Basics</li>
-                    <li>PostgreSQL</li>
-                </ul>
-            </div>
-            <!-- Business -->
-            <div class="bg-stripe-bg p-5 rounded border border-stripe-border">
-                <h5 class="text-[14px] font-semibold text-stripe-navy mb-4">Gestión & Operaciones</h5>
-                <ul class="space-y-2 text-[14px] text-stripe-slate">
-                    <li>Liderazgo Técnico (Tech Dir)</li>
-                    <li>Odoo ERP Architecture</li>
-                    <li>Gobierno ITSM</li>
-                    <li>Cumplimiento Fintech (CNBV)</li>
-                </ul>
-            </div>
+    <!-- Footer / Contact -->
+    <section id="contact" class="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-white mb-6">Let's build something great.</h2>
+        <p class="text-slate-400 mb-8 max-w-lg mx-auto">Currently open for leadership roles (Director of Tech, VP of Engineering, Staff Engineer) where I can drive transformation and engineering excellence.</p>
+        <div class="flex justify-center space-x-6 text-2xl">
+            <a href="https://www.linkedin.com/in/said-gonz%C3%A1lez-conde-2211bb62" target="_blank" class="text-slate-400 hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:said@saidgc.com" class="text-slate-400 hover:text-white transition"><i class="fa-solid fa-envelope"></i></a>
         </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-stripe-bg border-t border-stripe-border py-12">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-stripe-slate text-[14px] font-normal">© 2026 Said G. — Construido para escalar.</p>
-            <div class="flex gap-6">
-                <a href="mailto:hola@saidgc.com" class="text-stripe-label hover:text-stripe-purple text-[14px] transition-colors">Email</a>
-                <a href="https://linkedin.com/in/saidgc" target="_blank" class="text-stripe-label hover:text-stripe-purple text-[14px] transition-colors">LinkedIn</a>
-                <a href="https://github.com/saidgc" target="_blank" class="text-stripe-label hover:text-stripe-purple text-[14px] transition-colors">GitHub</a>
-            </div>
-        </div>
-    </footer>
+        <p class="text-slate-600 text-sm mt-12">&copy; 2026 Said González Conde.</p>
+    </section>
 
 </body>
 </html>
