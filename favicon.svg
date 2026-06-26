@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#0B0B0C"/>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="13.25" fill="none" stroke="#EDEDE8" stroke-opacity="0.12" stroke-width="1.5"/>
+  <text x="31" y="34" text-anchor="middle" dominant-baseline="central"
+        font-family="'Bricolage Grotesque','Arial Narrow',Helvetica,Arial,sans-serif"
+        font-weight="800" font-size="27" letter-spacing="-2.2" fill="#EDEDE8">SGC</text>
+  <circle cx="54" cy="44" r="4.4" fill="#FF6B4A"/>
+</svg>

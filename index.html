@@ -1,117 +1,243 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Said González Conde | Director of Technology</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        dark: '#0f172a',
-                        primary: '#3b82f6',
-                        accent: '#10b981'
-                    }
-                }
-            }
-        }
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Said González Conde | Director of Technology</title>
+  <meta name="description" content="Said González Conde — Director of Technology & Staff Engineer. Scalable infrastructure, cloud migrations, autonomous AI agents, and the teams behind them.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#0B0B0C">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{background:#0B0B0C;--accent:#FF6B4A;}
+    ::selection{background:var(--accent,#D6F84C);color:#0B0B0C;}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);}
+    .reveal.in{opacity:1;transform:none;}
+    a{color:inherit;}
+
+    /* hover states (compiled from the design's style-hover attributes) */
+    .nav-link:hover{color:#fff;}
+    .btn-ghost:hover{border-color:var(--accent)!important;color:var(--accent)!important;}
+    .btn-primary:hover{transform:translateY(-2px);}
+    .btn-outline:hover{border-color:#EDEDE8!important;}
+    .row-link:hover{padding-left:24px!important;background:rgba(237,237,232,0.02)!important;}
+
+    @media(max-width:860px){
+      .stats-grid{grid-template-columns:repeat(2,1fr)!important;}
+      .about-grid{grid-template-columns:1fr!important;gap:36px!important;}
+      .row-link{grid-template-columns:40px 1fr auto!important;gap:16px!important;}
+      .nav-links{gap:16px!important;}
+    }
+    @media(max-width:560px){
+      .nav-links .nav-text{display:none;}
+    }
+  </style>
 </head>
-<body class="bg-dark text-slate-300 font-sans antialiased selection:bg-primary selection:text-white">
+<body>
+<div style="background:#0B0B0C;color:#EDEDE8;font-family:'Hanken Grotesk',sans-serif;min-height:100vh;overflow-x:hidden;--accent:#FF6B4A;">
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-dark/90 backdrop-blur-sm border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <span class="text-white font-bold tracking-wider text-xl">SGC<span class="text-primary">.</span></span>
-                <div class="flex space-x-6 text-sm font-medium">
-                    <a href="#experience" class="hover:text-white transition">Experience</a>
-                    <a href="#contact" class="hover:text-white transition">Contact</a>
-                </div>
+  <nav style="position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(14px);background:rgba(11,11,12,0.6);border-bottom:1px solid rgba(237,237,232,0.07);">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;height:68px;display:flex;align-items:center;justify-content:space-between;">
+      <a href="#top" style="text-decoration:none;display:flex;align-items:baseline;gap:2px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:20px;letter-spacing:-0.02em;color:#fff;">SGC<span style="color:var(--accent);">.</span></a>
+      <div class="nav-links" style="display:flex;align-items:center;gap:28px;font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:0.02em;color:#9A9A92;">
+        <a href="#work" class="nav-link nav-text" style="text-decoration:none;">work</a>
+        <a href="#research" class="nav-link nav-text" style="text-decoration:none;">research</a>
+        <a href="#about" class="nav-link nav-text" style="text-decoration:none;">about</a>
+        <a href="mailto:said@saidgc.com" class="btn-ghost" style="text-decoration:none;border:1px solid rgba(237,237,232,0.18);padding:8px 16px;border-radius:999px;color:#EDEDE8;">get in touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="top" style="max-width:1180px;margin:0 auto;padding:172px 32px 90px;">
+    <div class="reveal" style="display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:34px;">
+      <span style="width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(255,107,74,0.18);"></span>
+      Available for leadership roles
+    </div>
+    <h1 class="reveal" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(44px,7.2vw,104px);line-height:0.98;letter-spacing:-0.035em;color:#fff;margin-bottom:30px;text-wrap:balance;">
+      I build scalable<br>infrastructure<br>&amp; the teams<br>behind it.
+    </h1>
+    <p class="reveal" style="max-width:600px;font-size:19px;line-height:1.6;color:#A7A79E;margin-bottom:44px;text-wrap:pretty;">
+      I&rsquo;m <span style="color:#EDEDE8;">Said González Conde</span> — Director of Technology &amp; Staff Engineer. Five-plus years decoupling legacy systems, driving digital transformations, and leading high-performance engineering teams across fintech and retail.
+    </p>
+    <div class="reveal" style="display:flex;flex-wrap:wrap;gap:14px;">
+      <a href="#work" class="btn-primary" style="text-decoration:none;background:var(--accent);color:#0B0B0C;padding:15px 28px;border-radius:999px;font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:10px;transition:transform .25s ease;">View selected work <span style="font-family:'JetBrains Mono',monospace;">→</span></a>
+      <a href="mailto:said@saidgc.com" class="btn-outline" style="text-decoration:none;border:1px solid rgba(237,237,232,0.2);color:#EDEDE8;padding:15px 28px;border-radius:999px;font-weight:600;font-size:15px;transition:border-color .25s ease;">said@saidgc.com</a>
+    </div>
+  </header>
+
+  <section style="border-top:1px solid rgba(237,237,232,0.08);border-bottom:1px solid rgba(237,237,232,0.08);">
+    <div class="stats-grid" style="max-width:1180px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(4,1fr);">
+      <div class="reveal" style="padding:48px 28px 48px 0;border-left:1px solid rgba(237,237,232,0.08);padding-left:28px;">
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(34px,4vw,52px);letter-spacing:-0.03em;color:#fff;line-height:1;">-70%</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.5;color:#8C8C84;margin-top:14px;letter-spacing:0.01em;">cloud OPEX cut via<br>AWS → GCP migration</div>
+      </div>
+      <div class="reveal" style="padding:48px 28px 48px 0;border-left:1px solid rgba(237,237,232,0.08);padding-left:28px;">
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(34px,4vw,52px);letter-spacing:-0.03em;color:#fff;line-height:1;">&lt;30m</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.5;color:#8C8C84;margin-top:14px;letter-spacing:0.01em;">downtime on a<br>core banking migration</div>
+      </div>
+      <div class="reveal" style="padding:48px 28px 48px 0;border-left:1px solid rgba(237,237,232,0.08);padding-left:28px;">
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(34px,4vw,52px);letter-spacing:-0.03em;color:#fff;line-height:1;">$20k+</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.5;color:#8C8C84;margin-top:14px;letter-spacing:0.01em;">monthly cloud spend<br>managed in production</div>
+      </div>
+      <div class="reveal" style="padding:48px 28px 48px 0;border-left:1px solid rgba(237,237,232,0.08);padding-left:28px;">
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(34px,4vw,52px);letter-spacing:-0.03em;color:#fff;line-height:1;">5+ yrs</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.5;color:#8C8C84;margin-top:14px;letter-spacing:0.01em;">leading high-performance<br>engineering teams</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" style="max-width:1180px;margin:0 auto;padding:110px 32px 60px;">
+    <div class="reveal" style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:64px;">
+      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(30px,4vw,46px);letter-spacing:-0.03em;color:#fff;">Selected impact</h2>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#8C8C84;">2021 — present</span>
+    </div>
+    <div>
+      <a href="mailto:said@saidgc.com" class="reveal row-link" style="text-decoration:none;display:grid;grid-template-columns:88px 1fr auto;gap:28px;align-items:start;padding:40px 12px;border-top:1px solid rgba(237,237,232,0.1);transition:padding-left .35s ease,background .35s ease;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--accent);padding-top:8px;">01</span>
+        <div>
+          <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(22px,2.6vw,32px);letter-spacing:-0.02em;color:#fff;margin-bottom:14px;line-height:1.1;">Digital transformation &amp; legacy decoupling</h3>
+          <p style="font-size:16px;line-height:1.65;color:#A7A79E;max-width:620px;margin-bottom:18px;text-wrap:pretty;">Spearheaded the strategic migration from an obsolete monolithic ERP (Odoo 13) to a modern custom decoupled architecture (POSX in Flutter / Cloud), eliminating massive technical debt and future-proofing nationwide retail operations.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#9A9A92;border:1px solid rgba(237,237,232,0.14);padding:5px 11px;border-radius:999px;">Odoo</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#9A9A92;border:1px solid rgba(237,237,232,0.14);padding:5px 11px;border-radius:999px;">Flutter</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#9A9A92;border:1px solid rgba(237,237,232,0.14);padding:5px 11px;border-radius:999px;">Cloud</span>
+          </div>
+        </div>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#4A4A46;padding-top:6px;">↗</span>
+      </a>
+      <a href="mailto:said@saidgc.com" class="reveal row-link" style="text-decoration:none;display:grid;grid-template-columns:88px 1fr auto;gap:28px;align-items:start;padding:40px 12px;border-top:1px solid rgba(237,237,232,0.1);transition:padding-left .35s ease,background .35s ease;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--accent);padding-top:8px;">02</span>
+        <div>
+          <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(22px,2.6vw,32px);letter-spacing:-0.02em;color:#fff;margin-bottom:14px;line-height:1.1;">FinOps &amp; cloud strategy</h3>
+          <p style="font-size:16px;line-height:1.65;color:#A7A79E;max-width:620px;margin-bottom:18px;text-wrap:pretty;">Architected the end-to-end database and infrastructure migration from AWS to GCP. Orchestrated massive data transfers with under 30 minutes of downtime, slashing operational cloud costs by 70%.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#9A9A92;border:1px solid rgba(237,237,232,0.14);padding:5px 11px;border-radius:999px;">AWS</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#9A9A92;border:1px solid rgba(237,237,232,0.14);padding:5px 11px;border-radius:999px;">GCP</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#9A9A92;border:1px solid rgba(237,237,232,0.14);padding:5px 11px;border-radius:999px;">FinOps</span>
+          </div>
+        </div>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#4A4A46;padding-top:6px;">↗</span>
+      </a>
+      <a href="mailto:said@saidgc.com" class="reveal row-link" style="text-decoration:none;display:grid;grid-template-columns:88px 1fr auto;gap:28px;align-items:start;padding:40px 12px;border-top:1px solid rgba(237,237,232,0.1);transition:padding-left .35s ease,background .35s ease;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--accent);padding-top:8px;">03</span>
+        <div>
+          <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(22px,2.6vw,32px);letter-spacing:-0.02em;color:#fff;margin-bottom:14px;line-height:1.1;">Autonomous AI agents &amp; automation</h3>
+          <p style="font-size:16px;line-height:1.65;color:#A7A79E;max-width:620px;margin-bottom:18px;text-wrap:pretty;">Designed and deployed autonomous support and executive agents in production — with cross-context routing, tool orchestration, and predictive ML for demand planning. Model- and vendor-agnostic by design, so the system isn&rsquo;t tied to any single LLM or provider.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#9A9A92;border:1px solid rgba(237,237,232,0.14);padding:5px 11px;border-radius:999px;">AI Agents</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#9A9A92;border:1px solid rgba(237,237,232,0.14);padding:5px 11px;border-radius:999px;">LLM-agnostic</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#9A9A92;border:1px solid rgba(237,237,232,0.14);padding:5px 11px;border-radius:999px;">Orchestration</span>
+          </div>
+        </div>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#4A4A46;padding-top:6px;">↗</span>
+      </a>
+      <a href="mailto:said@saidgc.com" class="reveal row-link" style="text-decoration:none;display:grid;grid-template-columns:88px 1fr auto;gap:28px;align-items:start;padding:40px 12px;border-top:1px solid rgba(237,237,232,0.1);transition:padding-left .35s ease,background .35s ease;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--accent);padding-top:8px;">04</span>
+        <div>
+          <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(22px,2.6vw,32px);letter-spacing:-0.02em;color:#fff;margin-bottom:14px;line-height:1.1;">Fintech &amp; high-scale infrastructure</h3>
+          <p style="font-size:16px;line-height:1.65;color:#A7A79E;max-width:620px;margin-bottom:18px;text-wrap:pretty;">At Fondeadora, executed time-sensitive core banking database migrations to comply with strict CNBV regulatory ultimatums, managing $20k+/month cloud environments for high-traffic financial applications.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#9A9A92;border:1px solid rgba(237,237,232,0.14);padding:5px 11px;border-radius:999px;">CNBV</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#9A9A92;border:1px solid rgba(237,237,232,0.14);padding:5px 11px;border-radius:999px;">Fintech</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#9A9A92;border:1px solid rgba(237,237,232,0.14);padding:5px 11px;border-radius:999px;">High-availability</span>
+          </div>
+        </div>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#4A4A46;padding-top:6px;">↗</span>
+      </a>
+      <div style="border-top:1px solid rgba(237,237,232,0.1);"></div>
+    </div>
+  </section>
+
+  <section id="about" style="max-width:1180px;margin:0 auto;padding:90px 32px 100px;">
+    <div class="about-grid" style="display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;">
+      <div class="reveal">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);">About</span>
+        <p style="font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:clamp(24px,3vw,34px);line-height:1.25;letter-spacing:-0.02em;color:#fff;margin-top:22px;text-wrap:pretty;">Technical leadership that ships — from regulatory-grade migrations to autonomous AI agents in production.</p>
+      </div>
+      <div class="reveal" style="font-size:17px;line-height:1.75;color:#A7A79E;display:flex;flex-direction:column;gap:20px;">
+        <p>I&rsquo;ve led the strategic migration of a nationwide retail operation off an obsolete monolithic ERP onto a custom decoupled architecture, eliminating massive technical debt in the process.</p>
+        <p>On the infrastructure side, I&rsquo;ve architected end-to-end AWS&nbsp;→&nbsp;GCP migrations with under 30 minutes of downtime, and executed time-sensitive core banking migrations to meet strict CNBV regulatory deadlines at Fondeadora.</p>
+        <p>Today I focus on autonomous AI systems — designing support and executive agents with tool orchestration and predictive ML for demand planning. I stay deliberately model- and vendor-agnostic, choosing the right LLM and stack per problem rather than betting the architecture on one provider.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#EDEDE8;background:rgba(237,237,232,0.06);padding:7px 13px;border-radius:6px;">Python</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#EDEDE8;background:rgba(237,237,232,0.06);padding:7px 13px;border-radius:6px;">Cloud Architecture</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#EDEDE8;background:rgba(237,237,232,0.06);padding:7px 13px;border-radius:6px;">AWS / GCP</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#EDEDE8;background:rgba(237,237,232,0.06);padding:7px 13px;border-radius:6px;">AI Agents</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#EDEDE8;background:rgba(237,237,232,0.06);padding:7px 13px;border-radius:6px;">LLMs</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#EDEDE8;background:rgba(237,237,232,0.06);padding:7px 13px;border-radius:6px;">MLOps</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#EDEDE8;background:rgba(237,237,232,0.06);padding:7px 13px;border-radius:6px;">PostgreSQL</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#EDEDE8;background:rgba(237,237,232,0.06);padding:7px 13px;border-radius:6px;">Team Leadership</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research" style="border-top:1px solid rgba(237,237,232,0.08);">
+    <div style="max-width:1180px;margin:0 auto;padding:110px 32px 60px;">
+      <div class="reveal" style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:56px;">
+        <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(30px,4vw,46px);letter-spacing:-0.03em;color:#fff;">Research &amp; writing</h2>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#8C8C84;">Peer-reviewed publications</span>
+      </div>
+      <div>
+        <a href="https://doi.org/10.61467/2007.1558.2024.v15i2.467" target="_blank" rel="noopener" class="reveal row-link" style="text-decoration:none;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:start;padding:36px 12px;border-top:1px solid rgba(237,237,232,0.1);transition:padding-left .35s ease,background .35s ease;">
+          <div>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--accent);margin-bottom:14px;">
+              <span>2024</span>
+              <span style="color:#5A5A55;">·</span>
+              <span style="color:#9A9A92;">IJCOPI · Vol. 15(2), pp. 85–94</span>
             </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto flex flex-col justify-center min-h-[80vh]">
-        <h2 class="text-primary font-semibold tracking-wide uppercase text-sm mb-4">Director of Technology & Staff Engineer</h2>
-        <h1 class="text-5xl sm:text-7xl font-extrabold text-white mb-6 leading-tight">
-            I build scalable <br />
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">infrastructure & teams.</span>
-        </h1>
-        <p class="text-lg text-slate-400 max-w-2xl mb-10 leading-relaxed">
-            Over 5 years of experience decoupling legacy systems, driving digital transformations, and leading high-performance engineering teams. Expert in Python, Cloud Architecture (AWS/GCP), and Autonomous AI Agents.
-        </p>
-        <div class="flex space-x-4">
-            <a href="#experience" class="bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-md font-medium transition shadow-lg shadow-blue-500/30">View Impact</a>
-            <a href="mailto:said@saidgc.com" class="border border-slate-600 hover:border-slate-400 text-white px-6 py-3 rounded-md font-medium transition">Get in Touch</a>
-        </div>
-    </section>
-
-    <!-- Experience/Impact Section -->
-    <section id="experience" class="py-20 bg-slate-900/50 border-y border-slate-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
-                <span class="bg-primary w-8 h-1 mr-4 rounded"></span> Featured Impact
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Impact 1 -->
-                <div class="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-primary/50 transition">
-                    <div class="text-accent text-3xl mb-4"><i class="fa-solid fa-code-branch"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-3">Digital Transformation & Legacy Decoupling</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        Spearheaded the strategic migration from an obsolete, monolithic ERP (Odoo 13) to a modern, custom-built decoupled architecture (POSX in Flutter/Cloud). Eliminated massive technical debt and future-proofed nationwide retail operations.
-                    </p>
-                    <span class="text-xs font-semibold px-2 py-1 bg-slate-700 text-slate-300 rounded">Odoo / Flutter / Cloud</span>
-                </div>
-
-                <!-- Impact 2 -->
-                <div class="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-primary/50 transition">
-                    <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-server"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-3">FinOps & Cloud Strategy (-70% OPEX)</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        Architected the end-to-end database and infrastructure migration from AWS to GCP. Orchestrated massive data transfers with under 30 minutes of downtime, slashing operational cloud costs by 70%.
-                    </p>
-                    <span class="text-xs font-semibold px-2 py-1 bg-slate-700 text-slate-300 rounded">AWS / GCP / FinOps</span>
-                </div>
-
-                <!-- Impact 3 -->
-                <div class="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-primary/50 transition">
-                    <div class="text-purple-500 text-3xl mb-4"><i class="fa-solid fa-robot"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-3">AI & Automation (Autonomous Agents)</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        Designed and deployed autonomous AI support and executive agents using LangGraph, Gemini, and Cloud Run, establishing cross-context routing and predictive ML models for demand planning.
-                    </p>
-                    <span class="text-xs font-semibold px-2 py-1 bg-slate-700 text-slate-300 rounded">LangGraph / Gemini / Python</span>
-                </div>
-
-                <!-- Impact 4 -->
-                <div class="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-primary/50 transition">
-                    <div class="text-yellow-500 text-3xl mb-4"><i class="fa-solid fa-building-columns"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-3">Fintech & High-Scale Infrastructure</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        At Fondeadora, executed time-sensitive core banking database migrations to comply with strict CNBV regulatory ultimatums. Managed $20k+ USD/month cloud environments for high-traffic financial applications.
-                    </p>
-                    <span class="text-xs font-semibold px-2 py-1 bg-slate-700 text-slate-300 rounded">CNBV / Fintech / High-Availability</span>
-                </div>
+            <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(21px,2.4vw,30px);letter-spacing:-0.02em;color:#fff;margin-bottom:12px;line-height:1.15;text-wrap:balance;">A study on the Detection of Fake News in Spanish</h3>
+            <p style="font-size:16px;line-height:1.65;color:#A7A79E;max-width:680px;margin-bottom:16px;text-wrap:pretty;">Proposed a Spanish-language fake-news detection model over ~40k tweets, benchmarking classical ML (Logistic Regression, Naïve Bayes, SVM) against LSTM, Bi-LSTM and transformer models (mBERT, BETO) — reaching 0.98 accuracy with BETO.</p>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#7A7A74;margin-bottom:18px;">Peer-reviewed · ISSN 2007-1558 · co-authored, BUAP</div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#9A9A92;border:1px solid rgba(237,237,232,0.14);padding:5px 11px;border-radius:999px;">NLP</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#9A9A92;border:1px solid rgba(237,237,232,0.14);padding:5px 11px;border-radius:999px;">Machine Learning</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#9A9A92;border:1px solid rgba(237,237,232,0.14);padding:5px 11px;border-radius:999px;">Transformers</span>
             </div>
-        </div>
-    </section>
+          </div>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#4A4A46;padding-top:6px;">↗</span>
+        </a>
+        <div style="border-top:1px solid rgba(237,237,232,0.1);"></div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer / Contact -->
-    <section id="contact" class="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl font-bold text-white mb-6">Let's build something great.</h2>
-        <p class="text-slate-400 mb-8 max-w-lg mx-auto">Currently open for leadership roles (Director of Tech, VP of Engineering, Staff Engineer) where I can drive transformation and engineering excellence.</p>
-        <div class="flex justify-center space-x-6 text-2xl">
-            <a href="https://www.linkedin.com/in/said-gonz%C3%A1lez-conde-2211bb62" target="_blank" class="text-slate-400 hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="mailto:said@saidgc.com" class="text-slate-400 hover:text-white transition"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-        <p class="text-slate-600 text-sm mt-12">&copy; 2026 Said González Conde.</p>
-    </section>
+  <section id="contact" style="border-top:1px solid rgba(237,237,232,0.08);">
+    <div style="max-width:1180px;margin:0 auto;padding:120px 32px;text-align:center;">
+      <h2 class="reveal" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(40px,7vw,88px);letter-spacing:-0.035em;color:#fff;line-height:1;margin-bottom:28px;">Let&rsquo;s build<br>something great.</h2>
+      <p class="reveal" style="max-width:540px;margin:0 auto 40px;font-size:18px;line-height:1.6;color:#A7A79E;text-wrap:pretty;">Open to Director of Technology, VP of Engineering, and Staff Engineer roles where I can drive transformation and engineering excellence.</p>
+      <div class="reveal" style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;">
+        <a href="mailto:said@saidgc.com" class="btn-primary" style="text-decoration:none;background:var(--accent);color:#0B0B0C;padding:16px 32px;border-radius:999px;font-weight:600;font-size:16px;transition:transform .25s ease;">said@saidgc.com</a>
+        <a href="https://www.linkedin.com/in/said-gonz%C3%A1lez-conde-2211bb62" target="_blank" rel="noopener" class="btn-outline" style="text-decoration:none;border:1px solid rgba(237,237,232,0.2);color:#EDEDE8;padding:16px 32px;border-radius:999px;font-weight:600;font-size:16px;transition:border-color .25s ease;">LinkedIn ↗</a>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(237,237,232,0.08);">
+      <div style="max-width:1180px;margin:0 auto;padding:28px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#6E6E68;">
+        <span>© 2026 Said González Conde</span>
+        <span>Director of Technology · México</span>
+      </div>
+    </div>
+  </section>
 
+</div>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(function(e){ e.classList.add('in'); }); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function(e, i){ e.style.transitionDelay = (Math.min(i, 3) * 60) + 'ms'; io.observe(e); });
+    setTimeout(function(){ els.forEach(function(e){ e.classList.add('in'); }); }, 1600);
+  })();
+</script>
 </body>
 </html>
